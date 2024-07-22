@@ -8,16 +8,16 @@ import ShowBooks from './components/ShowBooks';
 
 const App = () => {
   return (
-    <BookProvider>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/add" element={<AddBook />} />
-          <Route path="/show" element={<ShowBooks />} />
-          <Route path="/edit/:id" element={<EditBook />} />
-        </Routes>
-      </Router>
-    </BookProvider>
+    // <BookProvider>
+    //   <Router>
+    //     <Routes>
+    //       <Route path="/" element={<Home />} />
+    //       <Route path="/add" element={<AddBook />} />
+    //       <Route path="/show" element={<ShowBooks />} />
+    //       <Route path="/edit/:id" element={<EditBook />} />
+    //     </Routes>
+    //   </Router>
+    // </BookProvider>
   );
 };
 
