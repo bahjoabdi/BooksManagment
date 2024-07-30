@@ -1,4 +1,5 @@
 import React from 'react';
+///import Footer from '../components/Footer';
 import Footer from '../components/Footer';
 
 const AboutUs = () => {
@@ -9,7 +10,7 @@ const AboutUs = () => {
           <div className="flex items-center justify-between h-16 lg:h-20">
             <div className="flex-shrink-0">
               <a href="/" title="Home" className="flex">
-                <img className="w-auto h-48" src="/download.png" alt="Logo" />
+                <img className="w-auto h-60" src="/download.png" alt="Logo" />
               </a>
             </div>
 
