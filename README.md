@@ -43,7 +43,7 @@ The Book Management System is a web application designed to help users efficient
 4: Start the development server: 
      '''sh
     npm run dev
- Open your browser and navigate to http://localhost:571 to view the application.
+ Open your browser and navigate to http://localhost:5178/ to view the application.
 Components
 Home
 The Home component serves as the landing page of the application, providing an overview and access to main features such as adding books and viewing the book list.
@@ -67,3 +67,16 @@ Footer
 The Footer component provides navigation links and additional information at the bottom of the application.   
 
 
+
+### Notes:
+
+1. **Introduction**: Briefly explains what the project is about.
+2. **Features**: Lists the main features of the application.
+3. **Technologies Used**: Lists the main technologies and libraries used in the project.
+4. **Installation**: Step-by-step instructions on how to install and run the project locally.
+5. **Usage**: Instructions on how to start the development server and access the application.
+6. **Components**: Provides a brief overview of the main components in the application.
+7. **Contributing**: Guidelines for contributing to the project.
+8. **License**: Information about the project's license.
+
+Make sure to customize this README file as needed to fit your specific project details.

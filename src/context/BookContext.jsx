@@ -1,8 +1,33 @@
-import React,{createContext,useReducer } from "react";
-import BookReducer,{ACTION} from './BookReducer';
+// src/context/BookContext.jsx
+import React, { createContext, useReducer } from 'react';
 import useLocalStorage from '../hooks/useLocalStorage';
 
+const ACTION = {
+  ADD_BOOK: 'ADD_BOOK',
+  DELETE_BOOK: 'DELETE_BOOK',
+  UPDATE_BOOK: 'UPDATE_BOOK',
+  SET_BOOKS: 'SET_BOOKS',
+};
 
+const bookReducer = (state, action) => {
+  switch (action.type) {
+    case ACTION.ADD_BOOK:
+      return { ...state, books: [...state.books, action.payload] };
+    case ACTION.DELETE_BOOK:
+      return { ...state, books: state.books.filter((book) => book.id !== action.payload) };
+    case ACTION.UPDATE_BOOK:
+      return {
+        ...state,
+        books: state.books.map((book) =>
+          book.id === action.payload.id ? action.payload : book
+        ),
+      };
+    case ACTION.SET_BOOKS:
+      return { ...state, books: action.payload };
+    default:
+      return state;
+  }
+};
 
 const initialState = {
   books: [],
@@ -12,11 +37,11 @@ export const BookContext = createContext(initialState);
 
 export const BookProvider = ({ children }) => {
   const [storedBooks, setStoredBooks] = useLocalStorage('books', initialState.books);
-  const [state, dispatch] = useReducer(BookReducer, { books: storedBooks });
+  const [state, dispatch] = useReducer(bookReducer, { books: storedBooks });
 
   const addBook = (book) => {
-    const updatedBooks = [...state.books, { ...book, id: state.books.length + 1 }];
-    dispatch({ type: ACTION.ADD_BOOK, payload: { ...book, id: state.books.length + 1 } });
+    const updatedBooks = [...state.books, book];
+    dispatch({ type: ACTION.ADD_BOOK, payload: book });
     setStoredBooks(updatedBooks);
   };
 
@@ -38,8 +63,8 @@ export const BookProvider = ({ children }) => {
   };
 
   return (
-    <BookContext.Provider value={{ books: state.books, addBook, deleteBook, updateBook, setBooks , dispatch}}>
+    <BookContext.Provider value={{ books: state.books, addBook, deleteBook, updateBook, setBooks }}>
       {children}
     </BookContext.Provider>
-  );
+  );
 };

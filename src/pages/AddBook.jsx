@@ -7,7 +7,7 @@ const AddBook = () => {
   const [author, setAuthor] = useState('');
   const [genre, setGenre] = useState('');
   const [publicationDate, setPublicationDate] = useState('');
-  const { books, dispatch } = useContext(BookContext);
+  const { books, addBook } = useContext(BookContext);
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -23,12 +23,12 @@ const AddBook = () => {
       publicationDate,
     };
 
-    dispatch({ type: 'ADD_BOOK', payload: newBook });
+    addBook(newBook);
     navigate('/show');
   };
 
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-white min-h-screen p-8">
       <header className="bg-gray-100 fixed top-0 left-0 right-0 z-50">
         <div className="px-4 mx-auto sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
@@ -60,7 +60,6 @@ const AddBook = () => {
           </div>
         </div>
       </header>
-      
       <section className="bg-[#FCF8F1] bg-opacity-30 py-10 sm:py-16 lg:py-24">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
@@ -126,4 +125,4 @@ const AddBook = () => {
   );
 };
 
-export default AddBook;
+export default AddBook;
