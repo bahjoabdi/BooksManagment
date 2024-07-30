@@ -2,11 +2,12 @@ import React from 'react'
 
 function Footer() {
   return (
-    <section class="py-10 bg-blue-900 sm:pt-16 lg:pt-24">
+    <section class="py-10 bg-blue-600 sm:pt-16 lg:pt-24">
     <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-12">
             <div>
-                <img class="w-auto h-7" src="https://cdn.rareblocks.xyz/collection/celebration/images/logo-alt.svg" alt="" />
+            <img className="h-20 w-auto" src="/download.png" alt="Footer Logo" />
+                {/* <img class="/download.png" alt="" /> */}
 
                 <ul class="mt-8 space-y-4">
                     <li>
@@ -44,7 +45,6 @@ function Footer() {
                     </li>
 
                     <li>
-                        <a href="#" title="" class="text-blue-200 transition-all duration-200 hover:text-white focus:text-white"> Privacy Policy </a>
                     </li>
                 </ul>
             </div>
@@ -156,7 +156,7 @@ function Footer() {
                     </ul>
                 </div>
 
-                <p class="mt-6 text-sm text-blue-200 lg:mt-0">© Copyright 2024, All Rights Reserved by Postcraft</p>
+                <p class="mt-6 text-sm text-blue-200 lg:mt-0">© Copyright 2021, All Rights Reserved by Postcraft</p>
             </div>
         </div>
     </div>
