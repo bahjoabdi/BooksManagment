@@ -66,7 +66,7 @@ const AddBook = () => {
             <div>
               <p className="text-base font-semibold tracking-wider text-blue-600 uppercase">Book Management System</p>
               <h2 className="mt-4 text-4xl font-bold text-black lg:mt-8 sm:text-6xl xl:text-8xl">Add a New Book</h2>
-              <p className="mt-4 text-base text-black lg:mt-8 sm:text-xl">Fill in the details below to add a new book to your collection.</p>
+              <p className="mt-4 text-base text-black lg:mt-8 sm:text-xl">Fill in the details below to add  new book to your collection.</p>
             </div>
             <div className="relative">
               <div className="bg-white p-8 rounded-lg shadow-lg">
@@ -106,7 +106,7 @@ const AddBook = () => {
                       onChange={(e) => setPublicationDate(e.target.value)}
                       className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm"
                     />
-                    
+
                   </div>
                   <div>
                     <button
